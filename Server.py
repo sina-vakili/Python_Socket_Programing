@@ -2,8 +2,6 @@ import socket
 import sys 
 
 
-
-
 #create a Socket (my connection)
 def create_socket():
     try :
