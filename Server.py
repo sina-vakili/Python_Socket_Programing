@@ -1,5 +1,6 @@
 import socket
 import sys 
+import os
 
 
 #create a Socket (my connection)
@@ -15,6 +16,14 @@ def create_socket():
 
     except socket.error as mag:
         print ('Socket conection error : ' , str(mag) )
+#Give response of users
+response = os.system("ping -c 1 " + host)
+
+#and then check the response...
+if response == 0:
+  print (host, 'is up!' )
+else:
+  print (host, 'is down!' )
 
 #Build conection with listening and connection
 def bind_socket():
